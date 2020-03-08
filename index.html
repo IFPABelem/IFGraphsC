@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title>IFXXX - IFPA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Web App feito para disciplinar de Calculo I - 2018.02, realizar operações com matrizes quadradas by Alunos do IFPA.">
+    <meta name="keywords" content="tiago, danin, tiagodanin, tiagoedge, ifpa, belem, pa, IFXXX">
+    <meta name="author" content="Alunos do IFPA">
+
+    <link rel="shortcut icon" href="https://tiagodanin.github.io/images/favicon.ico">
+    <link rel="stylesheet" href="https://tiagodanin.github.io/uikit-3.0.0-beta.40/css/uikit.min.css">
+    <link rel="stylesheet" href="https://tiagodanin.github.io/css/theme.css">
+    <link rel="stylesheet" href="https://tiagodanin.github.io/css/reset.css">
+    <link rel="stylesheet" href="https://tiagodanin.github.io/css/colors.css">
+    <link rel="stylesheet" href="https://tiagodanin.github.io/css/style_time.css">
+    <link rel="stylesheet" href="https://tiagodanin.github.io/css/themify-icons.css">
+    <script src="https://tiagodanin.github.io/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+    <script src="https://tiagodanin.github.io/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@6.6.1/dist/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+
+<body>
+    <nav class="my-topbar uk-navbar uk-background-primary">
+        <div class="uk-navbar-left">
+            <a href="https://tiagodanin.github.io" class="uk-navbar-item uk-logo">
+                <img src="https://tiagodanin.github.io/images/github.png" class="my-photo uk-margin-small-right">
+                <label class="uk-visible@s">IFXXX</label>
+            </a>
+        </div>
+        <!--Menu desktop-->
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                <li class=""><a href="https://github.com/IFPABelem/IFXXX">Ver Projeto no GitHub <br> <i
+                            class="ti-github"></i></a></li>
+
+            </ul>
+            <button class="uk-hidden@s uk-button uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="more-vertical">Menu</button>
+        </div>
+    </nav>
+
+    <div class="uk-card uk-card-body uk-card-primary">
+        <h3 class="uk-card-title">Sobre</h3>
+        <div class="uk-panel">
+            <p>Web App feito para disciplinar de Calculo II - 2019.01.</p>
+        </div>
+    </div>
+    <hr class="uk-divider-icon">
+
+
+    <div class="uk-container">
+
+        <div class="uk-align-center">
+            <h1>
+                <span class="uk-text-primary uk-text-bold">IFXXX</span>
+            </h1>
+
+            <div>
+                <h2 class="uk-card-title">Informação</h2>
+                <p>Coloque os dados abaixo!</p>
+
+                <form role="form">
+                    <textarea id="txt:input" class="uk-textarea" placeholder=":)"></textarea>
+                    <button id="bt:load" type="button" class="uk-button uk-button-danger uk-button-small" style="width: 100%;">Obter Resultados<i class="ti-arrow-right"></i></button>
+                </form>
+
+                <p id="p:result" />
+            </div>
+            </br>
+        </div>
+        </br>
+        <div id="hidden" class="uk-hidden">
+            <hr class="uk-margin-top-remove uk-divider-icon">
+            <div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-text-center" uk-grid="">
+                <div>
+                    <h2 class="uk-card-title">Resultados</h2>
+                    <div>
+                        <table class="uk-table uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th>X</th>
+                                    <th>Entrada</th>
+                                    <th>Y</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table:result" />
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="uk-card-title">Gráfico</h2>
+                    <div id="div:line" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </br>
+    <script src="index.js"></script>
+
+
+    <hr class="uk-margin-top-remove uk-divider-icon">
+
+    <div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-text-center" uk-grid="">
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                <h3 class="uk-card-title"><span uk-icon="tag"></span></h3>
+                <p>JavaScript</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                <h3 class="uk-card-title"><span uk-icon="star"></span></h3>
+                <p>1</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <footer>
+        <div class="uk-card uk-card-secondary uk-card-body uk-panel-space uk-padding-remove-left uk-padding-remove-right">
+            <hr class="uk-margin-top-remove">
+            <p class="uk-align-center">
+                <small>
+                    <span uk-icon="code"></span> with <span uk-icon="heart"></span> by <a
+                        href="https://github.com/TiagoDanin">Tiago Danin</a>.
+                    <br>Built with <a href="https://jus.js.org" target="_blank">Jus</a> and <a
+                        href="https://getuikit.com" target="_blank">UiKit</a> and <a href="https://github.com/CuboHub"
+                        target="_blank">CuboHub</a>
+                    <br>Hosted in <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+                </small>
+            </p>
+        </div>
+    </footer>
+    <!--Menu modbile-->
+    <div class="uk-offcanvas-content">
+        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li class=""><a href="https://github.com/IFPABelem/IFXXX">Ver Projeto no GitHub <i
+                                class="ti-github"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://tiagodanin.github.io/js/jquery-1.10.2.min.js"></script>
+</body>
+
+</html>
